@@ -31,8 +31,6 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public List<Customer> getAllCustomerDetails() throws CustomerException {
 
-		
-			
 			List<Customer> customers= customerRepo.findAll();
 			
 			if(customers.isEmpty())
