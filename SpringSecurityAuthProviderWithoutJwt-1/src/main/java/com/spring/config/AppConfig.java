@@ -18,14 +18,11 @@ public class AppConfig {
 				.authenticated().and().csrf().disable().formLogin().and().httpBasic();
 
 		return http.build();
-
 	}
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-
 		return new BCryptPasswordEncoder();
-
 	}
 
 }
