@@ -52,7 +52,15 @@ public class CustomerController {
 		
 	}
 	
-
+	@GetMapping("/customers")
+	public ResponseEntity<List<Customer>> getAllCustomerHandler() throws CustomerException{
+		
+		
+		List<Customer> customers= customerService.getAllCustomerDetails();
+		
+		return new ResponseEntity<>(customers,HttpStatus.ACCEPTED);
+		
+	}
 	
 	
 
